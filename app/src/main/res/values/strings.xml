@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BabyCareProject</string>
+    <string name="txt_err_msg">Es necesario rellenar este campo</string>
+</resources>
