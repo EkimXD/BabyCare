@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">BabyCareProject</string>
+    <string name="app_name">BabyCare</string>
     <string name="txt_err_msg">Es necesario rellenar este campo</string>
+    <string name="baby_care_logo">Baby Care Logo</string>
 </resources>
