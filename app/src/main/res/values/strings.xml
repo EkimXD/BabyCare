@@ -2,4 +2,9 @@
     <string name="app_name">BabyCare</string>
     <string name="txt_err_msg">Es necesario rellenar este campo</string>
     <string name="baby_care_logo">Baby Care Logo</string>
+    <string name="usuario">Ingrese su e-mail</string>
+    <string name="contrasena">Ingrese su contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrar_msg">¿No posee una cuenta?, registrese</string>
+    <string name="aqui">aqui</string>
 </resources>
