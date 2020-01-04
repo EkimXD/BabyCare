@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.EditText
 import com.example.babycareproject.Comprobaciones.Validaciones
 import com.example.babycareproject.R
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -19,11 +21,12 @@ class LoginActivity : AppCompatActivity() {
         editTextList.add(editTextEmail)
         editTextList.add(editTextContrasena)
 
-        buttonIngresar.setOnClickListener({goToAppActivity()})
-        textRegistro.setOnClickListener({goToRegistroActivity()})
+        buttonIngresar.setOnClickListener{goToAppActivity()}
+        textRegistro.setOnClickListener{goToRegistroActivity()}
+
     }
 
-    fun goToAppActivity() {
+    private fun goToAppActivity() {
         if (Validaciones().validarNoVacio(editTextList) && Validaciones().validarCorreo(
                 editTextEmail
             )
@@ -36,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun goToRegistroActivity() {
+    private fun goToRegistroActivity() {
         startActivity(
             Intent(this, RegistroActivity::class.java)
         )

@@ -1,12 +1,15 @@
 package com.example.babycareproject.Comprobaciones
 
 import android.widget.EditText
+import com.example.babycareproject.R
+import android.R.attr.resource
+import android.content.res.Resources
 
 class Validaciones{
 
     constructor(){}
 
-    public fun validarNoVacio(editText:EditText,texto:String?="@string/txt_err_msg"):Boolean{
+    public fun validarNoVacio(editText:EditText,texto:String?= R.string.txt_err_msg.toString()):Boolean{
         if(editText.text.isEmpty()){
             editText.setError(texto)
             return false
@@ -15,7 +18,7 @@ class Validaciones{
         }
     }
 
-    public fun validarNoVacio(editText:ArrayList<EditText>, texto:String?="@string/txt_err_msg"):Boolean{
+    public fun validarNoVacio(editText:ArrayList<EditText>, texto:String?=R.string.txt_err_msg.toString()):Boolean{
         var bandera:Boolean=true
         editText.forEach{elemento->
             if(!validarNoVacio(elemento, texto)){
@@ -25,7 +28,7 @@ class Validaciones{
         return bandera
     }
 
-    public fun validarLogintudTexto(editText: EditText,longitud:Int=8,texto: String=""):Boolean{
+    public fun validarLogintudTexto(editText: EditText,longitud:Int=8,texto: String=R.string.txt_err_msg.toString()):Boolean{
         if(editText.textSize<longitud){
             editText.setError(texto)
             return false
@@ -34,8 +37,8 @@ class Validaciones{
         }
     }
 
-    public fun validarCorreo(editText: EditText,texto: String=""):Boolean{
-        val emailRegex = "^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})";
+    public fun validarCorreo(editText: EditText,texto: String=R.string.txt_err_msg.toString()):Boolean{
+        val emailRegex = "^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})"
         if(validarRegex(emailRegex,editText.text.toString())){
             return true
         }else{
@@ -44,7 +47,7 @@ class Validaciones{
         }
     }
 
-    public fun validarTelefono(editText: EditText,texto: String=""):Boolean{
+    public fun validarTelefono(editText: EditText,texto: String=R.string.txt_err_msg.toString()):Boolean{
         val phoneRegex ="^(\\+91[\\-\\s]?)?[0]?(91)?[789]\\d{9}\$"
         if(validarRegex(phoneRegex,editText.text.toString())){
             return true
