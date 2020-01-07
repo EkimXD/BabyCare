@@ -1,8 +1,7 @@
-package com.example.babycareproject.Comprobaciones
+package com.example.babycareproject.comprobaciones
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import android.util.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 
@@ -31,7 +30,11 @@ class Conexion{
         return mAuth.signInWithEmailAndPassword(email, password)
     }
 
-    fun closeConetion(){
+    fun logOutUser(){
         mAuth.signOut()
+    }
+
+    fun addUserExtraInformation(){
+
     }
 }

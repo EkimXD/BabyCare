@@ -1,16 +1,13 @@
-package com.example.babycareproject.Pantallas
+package com.example.babycareproject.pantallas
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
-import com.example.babycareproject.Comprobaciones.Validaciones
-import com.example.babycareproject.Comprobaciones.Conexion
+import com.example.babycareproject.comprobaciones.Validaciones
+import com.example.babycareproject.comprobaciones.Conexion
 import com.example.babycareproject.R
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

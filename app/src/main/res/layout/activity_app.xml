@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backColor"
-    tools:context=".Pantallas.AppActivity">
+    tools:context=".pantallas.AppActivity">
 
     <Button
         android:id="@+id/button"

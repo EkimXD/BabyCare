@@ -5,11 +5,10 @@ import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
-import com.example.babycareproject.Pantallas.LoginActivity
+import com.example.babycareproject.pantallas.LoginActivity
 import android.view.WindowManager
-import com.example.babycareproject.Comprobaciones.Conexion
-import com.example.babycareproject.Pantallas.AppActivity
+import com.example.babycareproject.comprobaciones.Conexion
+import com.example.babycareproject.pantallas.AppActivity
 
 
 @Suppress("UNREACHABLE_CODE")

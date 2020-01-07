@@ -1,9 +1,7 @@
-package com.example.babycareproject.Comprobaciones
+package com.example.babycareproject.comprobaciones
 
 import android.widget.EditText
 import com.example.babycareproject.R
-import android.R.attr.resource
-import android.content.res.Resources
 
 class Validaciones{
 
