@@ -17,18 +17,18 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
-        textInputArray.add(editText)
-        textInputArray.add(editText2)
+        textInputArray.add(editTextEmail)
+        textInputArray.add(editTextContrasenia)
         buttonRegistrar.setOnClickListener { registrarAction() }
     }
 
     private fun registrarAction() {
         //TODO aun hay que trabajar en el comportamiento de esta clase, quiza se deba implementar algunos DTOs
         if (Validaciones().validarNoVacio(textInputArray) &&
-            Validaciones().validarCorreo(editText) &&
-            Validaciones().validarLogintudTexto(editText2)
+            Validaciones().validarCorreo(editTextEmail) &&
+            Validaciones().validarLogintudTexto(editTextContrasenia)
         ) {
-            Conexion().createNewUser(editText.text.toString(), editText2.text.toString())
+            Conexion().createNewUser(editTextEmail.text.toString(), editTextContrasenia.text.toString())
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(
