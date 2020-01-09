@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.example.babycareproject.comprobaciones.Conexion
 import com.example.babycareproject.comprobaciones.Validaciones
 import com.example.babycareproject.R
+import com.example.babycareproject.data.UserLoginDTO
 import kotlinx.android.synthetic.main.activity_registro.*
 
 class RegistroActivity : AppCompatActivity() {
