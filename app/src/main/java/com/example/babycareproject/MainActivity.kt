@@ -1,5 +1,6 @@
 package com.example.babycareproject
 
+import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +8,9 @@ import android.os.Bundle
 import android.os.Handler
 import com.example.babycareproject.pantallas.LoginActivity
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.babycareproject.comprobaciones.Conexion
+import com.example.babycareproject.comprobaciones.Validaciones
 import com.example.babycareproject.pantallas.AppActivity
 
 

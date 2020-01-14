@@ -14,6 +14,8 @@ class AppActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app)
         button.setOnClickListener{logOutAction()}
+
+
     }
 
     private fun logOutAction() {

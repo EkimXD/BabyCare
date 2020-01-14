@@ -20,7 +20,6 @@ class RegistroActivity : AppCompatActivity() {
 
         textInputArray.add(editTextEmail)
         textInputArray.add(editTextContrasenia)
-        buttonRegistrar.setOnClickListener { registrarAction() }
     }
 
     private fun registrarAction() {
