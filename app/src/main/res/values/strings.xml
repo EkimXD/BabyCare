@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">BabyCareProject</string>
+    <string name="app_name">BabyCare</string>
     <string name="txt_err_msg">Es necesario rellenar este campo</string>
+    <string name="baby_care_logo">Baby Care Logo</string>
+    <string name="usuario">Ingrese su e-mail</string>
+    <string name="contrasena">Ingrese su contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrar_msg">¿No posee una cuenta?, registrese</string>
+    <string name="aqui">aqui</string>
+    <string name="registrar">Registrar</string>
+    <string name="lblTextViewCuenta_texto">Seleccione el tipo de cuenta</string>
+    <string name="textViewNombre_texto">Nombre</string>
+    <string name="textViewApellido">Apellido</string>
+    <string name="textViewCiudad_texto">Ciudad</string>
+    <string name="textViewConfirmacion_texto">Confirmación de contraseña</string>
+    <string name="radioButtonTutor_texto">Tutor</string>
+    <string name="radioButtonNiniera_texto">Niñero/a</string>
 </resources>

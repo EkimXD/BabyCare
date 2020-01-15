@@ -1,21 +1,46 @@
 package com.example.babycareproject
 
+import android.content.Context
+import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import com.example.babycareproject.Comprobaciones.Validaciones
-import kotlinx.android.synthetic.main.activity_main.*
+import android.os.Handler
+import com.example.babycareproject.pantallas.LoginActivity
+import android.view.WindowManager
+import android.widget.Toast
+import com.example.babycareproject.comprobaciones.Conexion
+import com.example.babycareproject.comprobaciones.Validaciones
+import com.example.babycareproject.pantallas.AppActivity
 
+
+@Suppress("UNREACHABLE_CODE")
 class MainActivity : AppCompatActivity() {
+
+    private val DURACION_SPLASH = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        this.getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        );
+
         setContentView(R.layout.activity_main)
 
-        Validaciones().validarLogintudTexto(editText)
-        val iText=ArrayList<EditText>()
-        iText.add(editText)
-        iText.add(editText2)
-        button.setOnClickListener({Validaciones().validarNoVacio(iText)})
+        Handler().postDelayed({
+            startActivity(
+                if (Conexion().getCurrentUser() != null
+                ) {
+                    Intent(this, AppActivity::class.java)
+                    //TODO corregir direccionamiento dependiendo si es ninera o usuario normal
+                } else {
+                    Intent(this, LoginActivity::class.java)
+                }
+            )
+            this.finish()
+        }, DURACION_SPLASH.toLong())
     }
 }
