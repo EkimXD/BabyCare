@@ -1,7 +1,7 @@
 package com.example.babycareproject.data
 
 data class DataUserG(
-    var nombre: String = "",
+    var nombre: String = "a",
     var apellido: String = "",
     var pais: String = "",
     var ciudad: String = "",
@@ -9,5 +9,4 @@ data class DataUserG(
     var aNino: String? = "",
     var sexoNino: String? = "",
     var fNacimientoNino: String? = ""
-
 )
