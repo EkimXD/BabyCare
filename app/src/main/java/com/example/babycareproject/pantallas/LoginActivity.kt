@@ -1,14 +1,16 @@
 package com.example.babycareproject.pantallas
 
+import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
-import com.example.babycareproject.comprobaciones.Validaciones
-import com.example.babycareproject.comprobaciones.Conexion
+import androidx.appcompat.app.AppCompatActivity
 import com.example.babycareproject.R
+import com.example.babycareproject.comprobaciones.Conexion
+import com.example.babycareproject.comprobaciones.Validaciones
 import kotlinx.android.synthetic.main.activity_login.*
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -31,6 +33,12 @@ class LoginActivity : AppCompatActivity() {
                 editTextEmail
             )
         ) {
+
+            val progressDialog = ProgressDialog(this)
+            progressDialog.setTitle("Login en Proceso")
+            progressDialog.setMessage("Cargando")
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+            progressDialog.show()
             Conexion().logginNewUser(
                 editTextEmail.text.toString(),
                 editTextContrasena.text.toString()
@@ -46,6 +54,7 @@ class LoginActivity : AppCompatActivity() {
                     //TODO hay que extraer "Usuario o contrasena incorrecto" desde string xml
                 }
             }
+            progressDialog.dismiss()
         }
     }
 
